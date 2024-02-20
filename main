@@ -1,0 +1,92 @@
+package com.example.ps2
+
+import android.os.Bundle
+import androidx.appcompat.app.AppCompatActivity
+import android.widget.*
+import java.text.SimpleDateFormat
+import java.util.*
+
+class MainActivity : AppCompatActivity() {
+
+    private lateinit var names: EditText
+    private lateinit var address: EditText
+    private lateinit var password: EditText
+    private lateinit var age: EditText
+    private lateinit var radioButton: RadioButton
+    private lateinit var female: RadioButton
+    private lateinit var other: RadioButton
+    private lateinit var simpleDatePicker: DatePicker
+    private lateinit var hobby1: CheckBox
+    private lateinit var hobby2: CheckBox
+    private lateinit var hobby3: CheckBox
+
+    override fun onCreate(savedInstanceState: Bundle?) {
+        super.onCreate(savedInstanceState)
+        setContentView(R.layout.activity_main)
+
+        names = findViewById(R.id.names)
+        address = findViewById(R.id.address)
+        password = findViewById(R.id.password)
+        age = findViewById(R.id.age)
+        radioButton = findViewById(R.id.radioButton)
+        female = findViewById(R.id.female)
+        other = findViewById(R.id.other)
+        simpleDatePicker = findViewById(R.id.simpleDatePicker)
+        hobby1 = findViewById(R.id.hobby1)
+        hobby2 = findViewById(R.id.hobby2)
+        hobby3 = findViewById(R.id.hobby3)
+
+        val submitButton: Button = findViewById(R.id.submit)
+        submitButton.setOnClickListener {
+            printDetails()
+        }
+    }
+
+    private fun printDetails() {
+        val nameText = names.text.toString()
+        val addressText = address.text.toString()
+        val passwordText = password.text.toString()
+        val ageText = age.text.toString()
+
+        val genderText = when {
+            radioButton.isChecked -> "Male"
+            female.isChecked -> "Female"
+            other.isChecked -> "Other"
+            else -> ""
+        }
+
+        val day = simpleDatePicker.dayOfMonth
+        val month = simpleDatePicker.month
+        val year = simpleDatePicker.year
+        val dobText = formatDate(day, month, year)
+
+        val hobbyText = StringBuilder()
+        if (hobby1.isChecked) {
+            hobbyText.append("Reading, ")
+        }
+        if (hobby2.isChecked) {
+            hobbyText.append("Writing, ")
+        }
+        if (hobby3.isChecked) {
+            hobbyText.append("Drawing, ")
+        }
+        val hobbies = hobbyText.toString().trimEnd(',', ' ')
+
+        val details = "Name: $nameText\n" +
+                "Address: $addressText\n" +
+                "Password: $passwordText\n" +
+                "Age: $ageText\n" +
+                "Gender: $genderText\n" +
+                "Date of Birth: $dobText\n" +
+                "Hobbies: $hobbies"
+
+        Toast.makeText(this, details, Toast.LENGTH_LONG).show()
+    }
+
+    private fun formatDate(day: Int, month: Int, year: Int): String {
+        val calendar = Calendar.getInstance()
+        calendar.set(year, month, day)
+        val dateFormat = SimpleDateFormat("dd/MM/yyyy", Locale.getDefault())
+        return dateFormat.format(calendar.time)
+    }
+}
