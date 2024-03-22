@@ -1,0 +1,505 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+   xmlns:app="http://schemas.android.com/apk/res-auto"
+   xmlns:tools="http://schemas.android.com/tools"
+   android:layout_width="match_parent"
+   android:layout_height="match_parent"
+   tools:context=".MainActivity">
+
+
+   <TextView
+       android:id="@+id/navhead"
+       android:layout_width="417dp"
+       android:layout_height="40dp"
+       android:background="#88E0EC"
+       android:gravity="center"
+       android:text="Basic App"
+       android:textSize="20sp"
+       app:layout_constraintBottom_toBottomOf="parent"
+       app:layout_constraintEnd_toEndOf="parent"
+       app:layout_constraintStart_toStartOf="parent"
+       app:layout_constraintTop_toTopOf="parent"
+       app:layout_constraintVertical_bias="0.0" />
+
+
+   <TextView
+       android:id="@+id/getName"
+       android:layout_width="wrap_content"
+       android:layout_height="wrap_content"
+       android:layout_marginStart="60dp"
+       android:layout_marginTop="100dp"
+       android:text="Name :"
+       app:layout_constraintStart_toStartOf="parent"
+       app:layout_constraintTop_toBottomOf="@+id/navhead" />
+
+
+   <TextView
+       android:id="@+id/getSurname"
+       android:layout_width="wrap_content"
+       android:layout_height="wrap_content"
+       android:layout_marginStart="60dp"
+       android:layout_marginTop="40dp"
+       android:text="Surname :"
+       app:layout_constraintStart_toStartOf="parent"
+       app:layout_constraintTop_toBottomOf="@+id/getName" />
+
+
+   <TextView
+       android:id="@+id/getMarks"
+       android:layout_width="wrap_content"
+       android:layout_height="wrap_content"
+       android:layout_marginStart="60dp"
+       android:layout_marginTop="40dp"
+       android:text="Marks :"
+       app:layout_constraintStart_toStartOf="parent"
+       app:layout_constraintTop_toBottomOf="@+id/getSurname" />
+
+
+   <TextView
+       android:id="@+id/getId"
+       android:layout_width="wrap_content"
+       android:layout_height="wrap_content"
+       android:layout_marginStart="60dp"
+       android:layout_marginTop="40dp"
+       android:text="id :"
+       app:layout_constraintStart_toStartOf="parent"
+       app:layout_constraintTop_toBottomOf="@+id/getMarks" />
+
+
+   <Button
+       android:id="@+id/addData"
+       android:layout_width="wrap_content"
+       android:layout_height="wrap_content"
+       android:layout_marginStart="32dp"
+       android:layout_marginTop="32dp"
+       android:background="#00BCD4"
+       android:text="ADD "
+       app:layout_constraintStart_toStartOf="parent"
+       app:layout_constraintTop_toBottomOf="@+id/getId" />
+
+
+   <Button
+       android:id="@+id/viewAll"
+       android:layout_width="wrap_content"
+       android:layout_height="wrap_content"
+       android:layout_marginTop="32dp"
+       android:background="#00BCD4"
+       android:text="VIEW"
+       app:layout_constraintEnd_toEndOf="parent"
+       app:layout_constraintHorizontal_bias="0.113"
+       app:layout_constraintStart_toEndOf="@+id/addData"
+       app:layout_constraintTop_toBottomOf="@+id/getId" />
+
+
+   <Button
+       android:id="@+id/updateData"
+       android:layout_width="wrap_content"
+       android:layout_height="wrap_content"
+       android:layout_marginStart="32dp"
+       android:layout_marginTop="12dp"
+       android:background="#00BCD4"
+       android:text="UPDATE"
+       app:layout_constraintStart_toStartOf="parent"
+       app:layout_constraintTop_toBottomOf="@+id/addData" />
+
+
+   <Button
+       android:id="@+id/deleteData"
+       android:layout_width="wrap_content"
+       android:layout_height="wrap_content"
+       android:layout_marginTop="12dp"
+       android:background="#00BCD4"
+       android:text="DELETE"
+       app:layout_constraintEnd_toEndOf="parent"
+       app:layout_constraintHorizontal_bias="0.055"
+       app:layout_constraintStart_toEndOf="@+id/updateData"
+       app:layout_constraintTop_toBottomOf="@+id/viewAll" />
+
+   <EditText
+       android:id="@+id/name"
+       android:layout_width="wrap_content"
+       android:layout_height="wrap_content"
+       android:layout_marginTop="80dp"
+       android:ems="10"
+       android:hint="Enter Name"
+       android:inputType="text"
+       app:layout_constraintEnd_toEndOf="parent"
+       app:layout_constraintHorizontal_bias="0.567"
+       app:layout_constraintStart_toEndOf="@+id/getName"
+       app:layout_constraintTop_toBottomOf="@+id/navhead" />
+
+
+   <EditText
+       android:id="@+id/Surname"
+       android:layout_width="wrap_content"
+       android:layout_height="wrap_content"
+       android:layout_marginTop="20dp"
+       android:ems="10"
+       android:hint="Enter Surname"
+       android:inputType="text"
+       app:layout_constraintEnd_toEndOf="parent"
+       app:layout_constraintHorizontal_bias="0.474"
+       app:layout_constraintStart_toEndOf="@+id/getSurname"
+       app:layout_constraintTop_toBottomOf="@+id/name" />
+
+
+   <EditText
+       android:id="@+id/id"
+       android:layout_width="wrap_content"
+       android:layout_height="wrap_content"
+       android:layout_marginTop="12dp"
+       android:ems="10"
+       android:hint="Enter Hint"
+       android:inputType="text"
+       app:layout_constraintEnd_toEndOf="parent"
+       app:layout_constraintHorizontal_bias="0.674"
+       app:layout_constraintStart_toEndOf="@+id/getId"
+       app:layout_constraintTop_toBottomOf="@+id/marks" />
+
+
+   <EditText
+       android:id="@+id/marks"
+       android:layout_width="wrap_content"
+       android:layout_height="wrap_content"
+       android:layout_marginTop="20dp"
+       android:ems="10"
+       android:hint="Enter Marks"
+       android:inputType="text"
+       app:layout_constraintEnd_toEndOf="parent"
+       app:layout_constraintHorizontal_bias="0.568"
+       app:layout_constraintStart_toEndOf="@+id/getMarks"
+       app:layout_constraintTop_toBottomOf="@+id/Surname" />
+
+   <TextView
+       android:id="@+id/table"
+       android:layout_width="354dp"
+       android:layout_height="175dp"
+       android:layout_marginTop="52dp"
+       android:layout_marginEnd="26dp"
+       app:layout_constraintEnd_toEndOf="parent"
+       app:layout_constraintTop_toBottomOf="@+id/updateData" />
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>
+
+MainActivity.kt
+package com.example.myapplication
+
+import androidx.appcompat.app.AppCompatActivity
+import android.os.Bundle
+import android.annotation.SuppressLint
+
+
+import android.widget.Button
+import android.widget.EditText
+import android.widget.TextView
+import android.widget.Toast
+
+class MainActivity : AppCompatActivity() {
+
+   @SuppressLint("Range", "MissingInflatedId")
+   override fun onCreate(savedInstanceState: Bundle?) {
+       super.onCreate(savedInstanceState)
+       setContentView(R.layout.activity_main)
+
+
+       val name = findViewById<EditText>(R.id.name)
+       val surname = findViewById<EditText>(R.id.Surname)
+       val marks = findViewById<EditText>(R.id.marks)
+       val id = findViewById<EditText>(R.id.id)
+
+
+       val addName = findViewById<Button>(R.id.addData)
+       val viewName = findViewById<Button>(R.id.viewAll)
+       val deleteName = findViewById<Button>(R.id.deleteData)
+       val updateName = findViewById<Button>(R.id.updateData)
+
+       val table=findViewById<TextView>(R.id.table)
+
+
+
+
+       // below code is to add on click
+       // listener to our add name button
+       addName.setOnClickListener{
+           table.setText(" ")
+
+           // below we have created
+           // a new DBHelper class,
+           // and passed context to it
+           val db = DBHelper(this, null)
+
+
+           // creating variables for values
+           // in name and age edit texts
+           val n = name.text.toString()
+           val s = surname.text.toString()
+           val m = marks.text.toString()
+           val user_id = id.text.toString()
+
+
+           // calling method to add
+           // name to our database
+           db.addName(n, s, m, user_id)
+
+
+           // Toast to message on the screen
+           Toast.makeText(this, n + " details added to database", Toast.LENGTH_LONG).show()
+
+
+           // at last, clearing edit texts
+           name.text.clear()
+           surname.text.clear()
+           marks.text.clear()
+           id.text.clear()
+       }
+
+
+       // below code is to add on click
+       // listener to our print name button
+       viewName.setOnClickListener{
+           table.setText(" ")
+
+           // creating a DBHelper class
+           // and passing context to it
+           val db = DBHelper(this, null)
+
+
+           // below is the variable for cursor
+           // we have called method to get
+           // all names from our database
+           // and add to name text view
+           val cursor = db.getName()
+
+
+           // moving the cursor to first position and
+           // appending value in the text view
+           cursor!!.moveToFirst()
+           /*
+           name.append(cursor.getString(cursor.getColumnIndex(DBHelper.NAME_COl)) + "\n")
+           surname.append(cursor.getString(cursor.getColumnIndex(DBHelper.SURNAME_COL)) + "\n")
+           marks.append(cursor.getString(cursor.getColumnIndex(DBHelper.MARKS_COL)) + "\n")
+           id.append(cursor.getString(cursor.getColumnIndex(DBHelper.ID_COL)) + "\n")
+           */
+           var n=cursor.getString(cursor.getColumnIndex(DBHelper.NAME_COl))
+           var s=cursor.getString(cursor.getColumnIndex(DBHelper.SURNAME_COL))
+           var m=cursor.getString(cursor.getColumnIndex(DBHelper.MARKS_COL))
+           var user_id=cursor.getString(cursor.getColumnIndex(DBHelper.ID_COL))
+           table.setText( "\n"+ n + " " +s+" "+m+" "+user_id)
+
+           // moving our cursor to next
+           // position and appending values
+           while(cursor.moveToNext()){
+               /*
+               name.append(cursor.getString(cursor.getColumnIndex(DBHelper.NAME_COl)) + "\n")
+               surname.append(cursor.getString(cursor.getColumnIndex(DBHelper.SURNAME_COL)) + "\n")
+               marks.append(cursor.getString(cursor.getColumnIndex(DBHelper.MARKS_COL)) + "\n")
+               id.append(cursor.getString(cursor.getColumnIndex(DBHelper.ID_COL)) + "\n")
+
+                */
+               n=cursor.getString(cursor.getColumnIndex(DBHelper.NAME_COl))
+                s=cursor.getString(cursor.getColumnIndex(DBHelper.SURNAME_COL))
+                m=cursor.getString(cursor.getColumnIndex(DBHelper.MARKS_COL))
+                user_id=cursor.getString(cursor.getColumnIndex(DBHelper.ID_COL))
+
+               table.setText( table.text.toString() + "\n"+ n + " " +s+" "+m+" "+user_id)
+
+           }
+
+
+           // at last we close our cursor
+           cursor.close()
+       }
+
+       //function to delete the content of db
+       deleteName.setOnClickListener{
+           table.setText(" ")
+           val db = DBHelper(this, null)
+
+           db.deleteName(name.text.toString())
+           Toast.makeText(this,name.text.toString()+" details is deleted", Toast.LENGTH_LONG).show()
+       }
+
+   }
+}
+
+
+
+
+AndroidManifest.xml
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+   xmlns:tools="http://schemas.android.com/tools">
+   <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" />
+   <application
+       android:allowBackup="true"
+       android:dataExtractionRules="@xml/data_extraction_rules"
+       android:fullBackupContent="@xml/backup_rules"
+       android:icon="@mipmap/ic_launcher"
+       android:label="@string/app_name"
+       android:roundIcon="@mipmap/ic_launcher_round"
+       android:supportsRtl="true"
+       android:theme="@style/Theme.MyApplication"
+       tools:targetApi="31">
+       <activity
+           android:name=".MainActivity"
+           android:exported="true">
+           <intent-filter>
+               <action android:name="android.intent.action.MAIN" />
+
+               <category android:name="android.intent.category.LAUNCHER" />
+           </intent-filter>
+       </activity>
+   </application>
+
+</manifest>
+
+
+DBHelper.kt
+package com.example.myapplication
+
+import android.content.ContentValues
+import android.content.Context
+import android.database.Cursor
+import android.database.sqlite.SQLiteDatabase
+import android.database.sqlite.SQLiteOpenHelper
+
+
+class DBHelper(context: Context, factory: SQLiteDatabase.CursorFactory?) :
+   SQLiteOpenHelper(context, DATABASE_NAME, factory, DATABASE_VERSION) {
+
+
+   // below is the method for creating a database by a sqlite query
+   override fun onCreate(db: SQLiteDatabase) {
+       // below is a sqlite query, where column names
+       // along with their data types is given
+       val query = ("CREATE TABLE " + TABLE_NAME + " ("
+               + NAME_COl + " TEXT, " +
+               SURNAME_COL + " TEXT," +
+               MARKS_COL + " TEXT," +
+               ID_COL + " TEXT" + ")")
+
+
+       // we are calling sqlite
+       // method for executing our query
+       db.execSQL(query)
+   }
+
+
+   override fun onUpgrade(db: SQLiteDatabase, p1: Int, p2: Int) {
+       // this method is to check if table already exists
+       db.execSQL("DROP TABLE IF EXISTS " + TABLE_NAME)
+       onCreate(db)
+   }
+
+
+   // This method is for adding data in our database
+   fun addName(name : String, surname : String, marks: String, id: String ){
+
+
+       // below we are creating
+       // a content values variable
+       val values = ContentValues()
+
+
+       // we are inserting our values
+       // in the form of key-value pair
+       values.put(NAME_COl, name)
+       values.put(SURNAME_COL,surname)
+       values.put(MARKS_COL, marks)
+       values.put(ID_COL,id)
+
+
+       // here we are creating a
+       // writable variable of
+       // our database as we want to
+       // insert value in our database
+       val db = this.writableDatabase
+
+
+       // all values are inserted into database
+       db.insert(TABLE_NAME, null, values)
+
+
+       // at last we are
+       // closing our database
+       db.close()
+   }
+
+
+   // This method is for deleting data from our database based on name
+   fun deleteName(name: String) {
+       // here we are creating a writable variable of our database
+       val db = this.writableDatabase
+
+
+       // we are specifying the condition for deletion using the ID column
+       val selection = "$NAME_COl = ?"
+
+
+       // specifying the value for the condition
+       val selectionArgs = arrayOf(name)
+
+
+       // performing the deletion operation
+       db.delete(TABLE_NAME, selection, selectionArgs)
+
+
+       // closing the database after deletion
+       db.close()
+   }
+
+
+
+
+   // below method is to get
+   // all data from our database
+   fun getName(): Cursor? {
+
+
+       // here we are creating a readable
+       // variable of our database
+       // as we want to read value from it
+       val db = this.readableDatabase
+
+
+       // below code returns a cursor to
+       // read data from the database
+       return db.rawQuery("SELECT * FROM " + TABLE_NAME, null)
+
+
+   }
+
+
+   companion object{
+       // here we have defined variables for our database
+
+
+       // below is variable for database name
+       private val DATABASE_NAME = "students_db"
+
+
+       // below is the variable for database version
+       private val DATABASE_VERSION = 1
+
+
+       // below is the variable for table name
+       val TABLE_NAME = "students_table"
+
+
+       // below is the variable for name column
+       val NAME_COl = "name"
+
+
+       // below is the variable for age column
+       val SURNAME_COL = "surname"
+
+
+       // below is the variable for id column
+       val MARKS_COL = "marks"
+
+
+       // below is the variable for id column
+       val ID_COL = "id"
+   }
+}
